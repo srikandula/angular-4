@@ -10,13 +10,15 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ProductListFilterPipe } from './product-list/product-list-filter.pipe';
 import { ProductService } from './service/product.service';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
     ProductListFilterPipe,
-    WelcomeComponent
+    WelcomeComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,8 @@ import { ProductService } from './service/product.service';
     RouterModule.forRoot([
       { path: 'welcome', component: WelcomeComponent },
       { path: '', redirectTo: 'welcome', pathMatch: 'full'},
-      { path: 'product', component: ProductListComponent }
+      { path: 'product', component: ProductListComponent },
+      { path: 'detail/:id', component: ProductDetailComponent }
     ])
   ],
   providers: [ProductService],

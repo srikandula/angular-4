@@ -14,19 +14,19 @@
 				<thead>
 					<tr>
 						<td>#</td>
-						<td><button class='btn btn-primary' (click)='toggleImage()'>
-								{{showImage ? 'Hide' : 'Show'}} Image</button></td>
 						<td>Name</td>
 						<td>Cost</td>
+						<td><button class='btn btn-primary' (click)='toggleImage()'>
+								{{showImage ? 'Hide' : 'Show'}} Image</button></td>
 					</tr>
 				</thead>
 				<tbody>
 					<tr *ngFor='let product of products | productListFilter:listFilter'>
-						<td>{{product.id}}</td>
+						<td>{{product.id}}</td>						
+						<td><a [routerLink]="['/detail',product.id]">{{product.name}}</a></td>
+						<td>{{product.cost | currency:'USD':true:'1.0-2'}}</td>
 						<td><img *ngIf='showImage' [src]='product.url'
 							[style.width.px]='40'></td>
-						<td>{{product.name}}</td>
-						<td>{{product.cost | currency:'USD':true:'1.0-2'}}</td>
 					</tr>
 				</tbody>
 			</table>
