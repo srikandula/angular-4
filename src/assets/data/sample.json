@@ -1,0 +1,32 @@
+[
+	{
+		"id": 1,
+		"name": "Bike",
+		"cost": 1000,
+		"url": "https://cdn3.iconfinder.com/data/icons/master/24/Bike-1-512.png"
+	},
+	{
+		"id": 2,
+		"name": "Car",
+		"cost": 3000,
+		"url": "https://cdn2.iconfinder.com/data/icons/vehicle-type/1024/suv-512.png"
+	},
+	{
+		"id": 3,
+		"name": "Mercedes",
+		"cost": 4000,
+		"url": "https://cdn2.iconfinder.com/data/icons/automobile-repair-service/512/mercedes-car-sedan-auto-front-view-512.png"
+	},
+	{
+		"id": 4,
+		"name": "Zeep",
+		"cost": 2500,
+		"url": "https://cdn2.iconfinder.com/data/icons/pixel-perfect-at-24px-volume-7/24/0007-512.png"
+	},
+	{
+		"id": 5,
+		"name": "Bus",
+		"cost": 8000,
+		"url": "https://cdn4.iconfinder.com/data/icons/eldorado-transport/40/bus_2-512.png"
+	}
+]
