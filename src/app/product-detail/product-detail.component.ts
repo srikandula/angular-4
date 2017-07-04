@@ -1,8 +1,9 @@
-import { IProduct } from '../product-list/iproduct';
+import { IProduct } from '../service/iproduct';
 import { ProductService } from '../service/product.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
+import { CommonModule  } from '@angular/common';
 
 @Component({
   templateUrl: './product-detail.component.html',
@@ -22,7 +23,7 @@ export class ProductDetailComponent implements OnInit {
   ngOnInit() {
     this.sub = this._route.params.subscribe(
       params => {
-        let id = +params['id'];
+        const id = +params['id'];
         this.getProduct(id);
       });
   }

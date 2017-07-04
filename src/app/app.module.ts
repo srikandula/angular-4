@@ -5,34 +5,25 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router'
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+import { ProductListModule } from './product-list/product-list.module';
+import { WelcomeModule } from './welcome/welcome.module';
+
 import { AppComponent } from './app.component';
-import { ProductListComponent } from './product-list/product-list.component';
-import { WelcomeComponent } from './welcome/welcome.component';
-import { ProductListFilterPipe } from './product-list/product-list-filter.pipe';
-import { ProductService } from './service/product.service';
-import { ProductDetailComponent } from './product-detail/product-detail.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductListComponent,
-    ProductListFilterPipe,
-    WelcomeComponent,
-    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    RouterModule,
     NgbModule.forRoot(),
-    RouterModule.forRoot([
-      { path: 'welcome', component: WelcomeComponent },
-      { path: '', redirectTo: 'welcome', pathMatch: 'full'},
-      { path: 'product', component: ProductListComponent },
-      { path: 'detail/:id', component: ProductDetailComponent }
-    ])
+    WelcomeModule,
+    ProductListModule
   ],
-  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
